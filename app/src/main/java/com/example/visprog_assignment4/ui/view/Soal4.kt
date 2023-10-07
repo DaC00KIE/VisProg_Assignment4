@@ -2,9 +2,11 @@ package com.example.visprog_assignment4.ui.view
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
@@ -67,6 +69,8 @@ fun Soal4View(){
 
 @Composable
 fun BottomBarThing(){
+    val context = LocalContext.current
+
     Row(
         modifier = Modifier
             .background(IGcolor)
@@ -79,23 +83,58 @@ fun BottomBarThing(){
         Icon(
             painter = painterResource(id = R.drawable.home),
             contentDescription = "home button",
-            tint = Color.LightGray)
+            tint = Color.LightGray,
+            modifier = Modifier
+                .clickable {
+                    Toast
+                        .makeText(context, "Home", Toast.LENGTH_SHORT)
+                        .show()
+                }
+        )
         Icon(
             painter = painterResource(id = R.drawable.search),
             contentDescription = "search button",
-            tint = Color.LightGray)
+            tint = Color.LightGray,
+            modifier = Modifier
+                .clickable {
+                    Toast
+                        .makeText(context, "Explore", Toast.LENGTH_SHORT)
+                        .show()
+                }
+        )
         Icon(
             painter = painterResource(id = R.drawable.post),
             contentDescription = "post button",
-            tint = Color.LightGray)
+            tint = Color.LightGray,
+            modifier = Modifier
+                .clickable {
+                    Toast
+                        .makeText(context, "Upload", Toast.LENGTH_SHORT)
+                        .show()
+                }
+        )
         Icon(
             painter = painterResource(id = R.drawable.reels),
             contentDescription = "reels button",
-            tint = Color.LightGray)
+            tint = Color.LightGray,
+            modifier = Modifier
+                .clickable {
+                    Toast
+                        .makeText(context, "Reels", Toast.LENGTH_SHORT)
+                        .show()
+                }
+        )
         Icon(
             painter = painterResource(id = R.drawable.baseline_person_2_24),
             contentDescription = "pfp button",
-            tint = Color.LightGray)
+            tint = Color.LightGray,
+            modifier = Modifier
+                .clickable {
+                    Toast
+                        .makeText(context, "Profile", Toast.LENGTH_SHORT)
+                        .show()
+                }
+        )
     }
 }
 
