@@ -8,7 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.example.visprog_assignment4.ui.theme.VisProg_Assignment4Theme
-import com.example.visprog_assignment4.ui.view.Soal3Preview
+import com.example.visprog_assignment4.ui.view.Soal4Preview
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Soal3Preview()
+                    Soal4Preview()
                 }
             }
         }
